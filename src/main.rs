@@ -45,8 +45,9 @@ fn rename(path: &Path) {
                 snake_case_name,
                 &extension.to_str().unwrap()
             );
-            println!("{}", new_name);
             full_path.set_file_name(new_name);
+
+            println!("renamed: {:?} -> {:?}", entry.path(), full_path);
             std::fs::rename(entry.path(), full_path).unwrap();
         }
     }
