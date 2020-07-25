@@ -163,6 +163,7 @@ name = "renamer"
 version = "0.1.0"
 dependencies = [
  "Inflector",
+ "regex",
  "structopt",
 ]
 
